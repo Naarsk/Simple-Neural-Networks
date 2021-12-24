@@ -8,7 +8,7 @@
 #include "func.h"
 
 
-#define UMAX  10000	                /*max no. of cycles */ 	
+#define UMAX  10000	            /*max no. of cycles */ 	
 #define PMAX  10000                 /*max no. of error evaluations*/
 #define EMIN  1/10000.0             /*min error on training set*/
 #define GMIN  7.8/100.0             /*min error on testing set*/
