@@ -1,0 +1,14 @@
+[project]
+name = "my_project"
+version = "1.2.3"  # or dynamic = ["version"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+dependencies = ["numpy", "pandas"]
+optional-dependencies = {dev = ["pytest"], test = ["coverage"]}
+
+[project.urls]
+issues = "https://github.com/Naarsk/Simple-Neural-Networks/tree/main/Kohonen_SOM"
+source = "https://github.com/Naarsk/Simple-Neural-Networks"
+maintainer = "https://github.com/Naarsk"
