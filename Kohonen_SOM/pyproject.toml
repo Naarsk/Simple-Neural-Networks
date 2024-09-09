@@ -1,12 +1,19 @@
-[project]
-name = "my_project"
-version = "1.2.3"  # or dynamic = ["version"]
+[tool.poetry]
+name = "kohonen-som"
+version = "0.1.0"
+description = "Kohonen Self Organizing Map"
+authors = ["Leonardo Cruciani <50495467+Naarsk@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.1.1"
+matplotlib = "^3.9.2"
+
 
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-dependencies = ["numpy", "pandas"]
-optional-dependencies = {dev = ["pytest"], test = ["coverage"]}
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [project.urls]
 issues = "https://github.com/Naarsk/Simple-Neural-Networks/tree/main/Kohonen_SOM"
