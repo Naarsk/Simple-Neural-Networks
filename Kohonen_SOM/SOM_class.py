@@ -12,7 +12,7 @@ def gauss_distance(i1, i2, s):  # gaussian weighting function
 
 class SOM:
 
-    def __init__(self, dat, net_shape : tuple[(int, int)]):
+    def __init__(self, dat, net_shape : tuple[int, int]):
         """
         Class that defines the network Self Organizing Map
         :param dat:
@@ -205,12 +205,18 @@ class SOM:
                 ax.plot3D([wxp, wxf1], [wyp, wyf1], [wzp, wzf1], 'r-')
 
     def plot_network_1d(self):
+        plt.close()
+        ax = plt.gca()
+        ax.set_aspect('equal')
         plt.plot(self.dat[:, 0], self.dat[:, 1], '.')
         plt.plot(self.w[:, 0], self.w[:, 1], 'or-')
         plt.suptitle(r'Kohonen SOM', fontsize=14)
         plt.show()
 
     def plot_network_2d(self):
+        plt.close()
+        ax = plt.gca()
+        ax.set_aspect('equal')
         plt.plot(self.dat[:, 0], self.dat[:, 1], '.')
         plt.plot(self.w[:, :, 0], self.w[:, :, 1], 'or')
         self.connect_points_2d()
@@ -219,6 +225,7 @@ class SOM:
 
     def plot_network_3d(self):
         # Creating figure
+        plt.close()
         plt.figure(figsize=(10, 7))
         ax = plt.axes(projection="3d")
         lw = np.reshape(self.w, (self.net_shape[0] * self.net_shape[1], 3))
